@@ -70,11 +70,7 @@ void f4() {
 
 	bool ok = true;
 	while (ok && firstIndex < test.length()) {
-		if (test[lastIndex] == test[firstIndex]) {
-			lastIndex--;
-			firstIndex++;
-		}
-		else {
+		if (test[lastIndex--] != test[firstIndex++]) {
 			ok = false;
 		}
 	}
