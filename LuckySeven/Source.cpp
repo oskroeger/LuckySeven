@@ -16,7 +16,7 @@ void f6();
 void f7();
 
 int main() {
-	f3();
+	f4();
 	return 0;
 }
 
@@ -39,7 +39,6 @@ void f1() {
 	}
 	cout << "largest = " << large << " smallest = " << small << endl;
 }
-
 // program that calculates and prints the sum of the 
 // first 50 positive multiples of 7
 void f2() {
@@ -58,4 +57,31 @@ void f3() {
 		fact = fact * i;
 	}
 	cout << endl;
+}
+// program that reads in a string and determines
+// whether or not it is a palindrome
+void f4() {
+	
+	string test = "";
+	cout << "Enter a string: " << endl;
+	cin >> test;
+	int lastIndex = test.length() - 1;
+	int firstIndex = 0;
+
+	bool ok = true;
+	while (ok && firstIndex < test.length()) {
+		if (test[lastIndex] == test[firstIndex]) {
+			lastIndex--;
+			firstIndex++;
+		}
+		else {
+			ok = false;
+		}
+	}
+	if (ok) {
+		cout << "It is a palendrome." << endl;
+	}
+	else {
+		cout << "It is not a palendrome." << endl;
+	}
 }
