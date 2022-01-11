@@ -16,7 +16,7 @@ void f6();
 void f7();
 
 int main() {
-	f2();
+	f3();
 	return 0;
 }
 
@@ -44,7 +44,18 @@ void f1() {
 // first 50 positive multiples of 7
 void f2() {
 	int sum = 0;
-	for (int i = 1; i <= 500; i++)
+	for (int i = 1; i <= 50; i++)
 		sum += i * 7;
 	cout << "sum = " << sum << endl;
+}
+// program that calculates and prints the first 
+// 10 terms of the factorial
+void f3() {
+	
+	int fact = 1;
+	for (int i = 2; i <= 10; i++) {
+		cout << fact << " ";
+		fact = fact * i;
+	}
+	cout << endl;
 }
