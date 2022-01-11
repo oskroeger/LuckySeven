@@ -1,6 +1,10 @@
 // Lucky 7
 // Owen Kroeger
+
 #include <iostream>
+#include <string>
+#include <cstdlib>
+
 using namespace std;
 
 void f1();
@@ -12,7 +16,7 @@ void f6();
 void f7();
 
 int main() {
-	f1();
+	f2();
 	return 0;
 }
 
@@ -34,4 +38,13 @@ void f1() {
 			large = curr;
 	}
 	cout << "largest = " << large << " smallest = " << small << endl;
+}
+
+// program that calculates and prints the sum of the 
+// first 50 positive multiples of 7
+void f2() {
+	int sum = 0;
+	for (int i = 1; i <= 500; i++)
+		sum += i * 7;
+	cout << "sum = " << sum << endl;
 }
