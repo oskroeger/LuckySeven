@@ -16,7 +16,7 @@ void f6();
 void f7();
 
 int main() {
-	f4();
+	f5();
 	return 0;
 }
 
@@ -80,4 +80,25 @@ void f4() {
 	else {
 		cout << "It is not a palendrome." << endl;
 	}
+}
+void f5() {
+	int num = 0;
+	int i = 2;
+	int count = 0;
+	bool test = true;
+	cout << "Enter an integer: " << endl;
+	cin >> num;
+	while (i < 10 && test == true) {
+		if (num >= 10 && num % i == 0)
+			test = false;
+		else if (num < 10 && num % i == 0)
+			count++;
+			if (count == 2)
+				test = false;
+		i++;
+	}
+	if (test)
+		cout << num << " is a prime number." << endl;
+	else if (!test)
+		cout << num << " is not a prime number." << endl;
 }
