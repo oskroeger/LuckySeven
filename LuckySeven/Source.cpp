@@ -81,20 +81,17 @@ void f4() {
 		cout << "It is not a palendrome." << endl;
 	}
 }
+// program that takes an input integer from the console
+// and determines whether or not it is a prime number
 void f5() {
 	int num = 0;
 	int i = 2;
-	int count = 0;
 	bool test = true;
 	cout << "Enter an integer: " << endl;
 	cin >> num;
-	while (i < 10 && test == true) {
-		if (num >= 10 && num % i == 0)
+	while (i <= sqrt(num) && test == true) {
+		if (num % i == 0)
 			test = false;
-		else if (num < 10 && num % i == 0)
-			count++;
-			if (count == 2)
-				test = false;
 		i++;
 	}
 	if (test)
